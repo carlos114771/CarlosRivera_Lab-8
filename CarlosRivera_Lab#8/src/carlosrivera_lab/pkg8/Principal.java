@@ -5,29 +5,21 @@
  */
 package carlosrivera_lab.pkg8;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Fiery-Salamander
+ * @author Usuario Dell
  */
-public class MainPrincipal extends javax.swing.JFrame {
+public class Principal extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainPrincipal
+     * Creates new form Principal
      */
-    public MainPrincipal() {
+    public Principal() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        cont = 0;
     }
 
     /**
@@ -39,7 +31,7 @@ public class MainPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Hadas = new javax.swing.JDialog();
+        jd_creacion = new javax.swing.JDialog();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -88,20 +80,7 @@ public class MainPrincipal extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         tf_alasS = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
-        tf_alturaSS = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        tf_nombreSS = new javax.swing.JTextField();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        tf_edadSS = new javax.swing.JTextField();
-        jLabel29 = new javax.swing.JLabel();
-        tf_saludSS = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        tf_poderSS = new javax.swing.JTextField();
-        jLabel31 = new javax.swing.JLabel();
-        tf_alasSS = new javax.swing.JTextField();
-        bt_agregar_salamandras = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jl_modHadas = new javax.swing.JList();
@@ -119,16 +98,9 @@ public class MainPrincipal extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         tf_alas1 = new javax.swing.JTextField();
         bt_modificar_hadas = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jl_elimHadas = new javax.swing.JList();
-        cb_elimhadas = new javax.swing.JComboBox();
-        bt_eliminar_hadas = new javax.swing.JButton();
-        Simulation = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -136,6 +108,8 @@ public class MainPrincipal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+
+        jTabbedPane2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 0, 0)));
 
         jLabel3.setText("Nombre");
 
@@ -204,7 +178,7 @@ public class MainPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(140, 140, 140)
                         .addComponent(bt_agregar_lamias, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,7 +207,7 @@ public class MainPrincipal extends javax.swing.JFrame {
                     .addComponent(tf_branquias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(bt_agregar_lamias, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Lamias", jPanel4);
@@ -304,7 +278,7 @@ public class MainPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(146, 146, 146)
                         .addComponent(bt_agregar_hamadriades, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,7 +305,7 @@ public class MainPrincipal extends javax.swing.JFrame {
                     .addComponent(tf_salarbolH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(bt_agregar_hamadriades, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Hamadriades", jPanel5);
@@ -390,7 +364,7 @@ public class MainPrincipal extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(tf_alturaS, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(tf_alasS, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bt_agregar_silfides, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -421,102 +395,20 @@ public class MainPrincipal extends javax.swing.JFrame {
                     .addComponent(tf_alasS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addComponent(bt_agregar_silfides, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Silfides", jPanel6);
-
-        jLabel26.setText("Altura");
-
-        jLabel27.setText("Nombre");
-
-        jLabel28.setText("Edad");
-
-        jLabel29.setText("Salud");
-
-        tf_saludSS.setEditable(false);
-        tf_saludSS.setText("683");
-
-        jLabel30.setText("Poder");
-
-        tf_poderSS.setEditable(false);
-        tf_poderSS.setText("71");
-
-        jLabel31.setText("Alas");
-
-        bt_agregar_salamandras.setText("AGREGAR");
-        bt_agregar_salamandras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_agregar_salamandrasActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel29)
-                                    .addComponent(jLabel28)
-                                    .addComponent(jLabel27))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addComponent(tf_saludSS, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(40, 40, 40)
-                                        .addComponent(jLabel30)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tf_poderSS, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(tf_nombreSS, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tf_edadSS, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel26)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tf_alturaSS, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel31)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tf_alasSS, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(bt_agregar_salamandras, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+            .addGap(0, 568, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel27)
-                    .addComponent(tf_nombreSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26)
-                    .addComponent(tf_alturaSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_edadSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
-                    .addComponent(tf_poderSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29)
-                    .addComponent(tf_saludSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_alasSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31))
-                .addGap(33, 33, 33)
-                .addComponent(bt_agregar_salamandras, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+            .addGap(0, 263, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Salamandras", jPanel7);
@@ -525,11 +417,14 @@ public class MainPrincipal extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane2)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane2)
                 .addContainerGap())
@@ -589,81 +484,83 @@ public class MainPrincipal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel34)
-                                .addGap(18, 18, 18)
-                                .addComponent(tf_edad1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel32)
-                                .addGap(18, 18, 18)
-                                .addComponent(tf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addGap(5, 5, 5)
-                            .addComponent(jLabel33)
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGap(51, 51, 51)
+                            .addComponent(jLabel37)
                             .addGap(18, 18, 18)
-                            .addComponent(tf_altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel37)
-                                .addGap(18, 18, 18)
-                                .addComponent(tf_aleta1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel38)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tf_branquias1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(19, 19, 19)
+                            .addComponent(tf_aleta1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGap(49, 49, 49)
                             .addComponent(jLabel35)
                             .addGap(18, 18, 18)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(bt_modificar_hadas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tf_alas1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tf_alas1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                            .addGap(24, 24, 24)
+                            .addComponent(jLabel38)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_branquias1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(jLabel34)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(tf_edad1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(jLabel32)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(tf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(jLabel33)
+                                .addGap(18, 18, 18)
+                                .addComponent(tf_altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cb_hadas, 0, 196, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cb_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel32)
                             .addComponent(tf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel33)
                             .addComponent(tf_altura1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(11, 11, 11)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tf_edad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel34))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel37)
                             .addComponent(tf_aleta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel38)
                             .addComponent(tf_branquias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tf_alas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel35))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -671,156 +568,64 @@ public class MainPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Modificar", jPanel2);
-
-        jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jScrollPane2.setViewportView(jl_elimHadas);
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        cb_elimhadas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Lamias", "Hamadriades", "Silfides", "Ssalamadras" }));
-
-        bt_eliminar_hadas.setText("Eliminar");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(bt_eliminar_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(147, 147, 147))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(cb_elimhadas, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(cb_elimhadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bt_eliminar_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
         jTabbedPane1.addTab("Eliminar", jPanel3);
 
-        javax.swing.GroupLayout HadasLayout = new javax.swing.GroupLayout(Hadas.getContentPane());
-        Hadas.getContentPane().setLayout(HadasLayout);
-        HadasLayout.setHorizontalGroup(
-            HadasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 584, Short.MAX_VALUE)
         );
-        HadasLayout.setVerticalGroup(
-            HadasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HadasLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jTabbedPane1))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 303, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout SimulationLayout = new javax.swing.GroupLayout(Simulation.getContentPane());
-        Simulation.getContentPane().setLayout(SimulationLayout);
-        SimulationLayout.setHorizontalGroup(
-            SimulationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jTabbedPane1.addTab("Modificar", jPanel2);
+
+        javax.swing.GroupLayout jd_creacionLayout = new javax.swing.GroupLayout(jd_creacion.getContentPane());
+        jd_creacion.getContentPane().setLayout(jd_creacionLayout);
+        jd_creacionLayout.setHorizontalGroup(
+            jd_creacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_creacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
-        SimulationLayout.setVerticalGroup(
-            SimulationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jd_creacionLayout.setVerticalGroup(
+            jd_creacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_creacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setFont(new java.awt.Font("Discotechia Expanded", 0, 18)); // NOI18N
-        jButton1.setText("HADAS");
+        jButton1.setText("Hadas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Discotechia Expanded", 0, 18)); // NOI18N
-        jButton2.setText("PELEAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        jButton2.setText("Simulacion");
 
-        jLabel1.setFont(new java.awt.Font("Discotechia Expanded", 0, 24)); // NOI18N
-        jLabel1.setText("Pelea de Hadas");
+        jMenu1.setText("Opciones");
 
-        jMenu1.setText("Archivos");
-
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText("Abrir");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setText("Guardar");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
         jMenu1.add(jMenuItem2);
 
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem3.setText("Guardar Como");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
         jMenu1.add(jMenuItem3);
 
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_4, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem4.setText("Salir");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
-            }
-        });
         jMenu1.add(jMenuItem4);
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_5, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setText("About");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
         jMenu1.add(jMenuItem5);
 
         jMenuBar1.add(jMenu1);
@@ -832,51 +637,39 @@ public class MainPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(62, 62, 62)
+                .addComponent(jButton1)
+                .addGap(79, 79, 79)
+                .addComponent(jButton2)
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel1)
-                .addGap(54, 54, 54)
+                .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.Hadas.setModal(true);
-        this.Hadas.pack();
-        this.Hadas.setLocationRelativeTo(this);
-        this.Hadas.setVisible(true);
+        // TODO add your handling code here:
+        this.jd_creacion.setModal(true);
+        this.jd_creacion.pack();
+        this.jd_creacion.setLocationRelativeTo(this);
+        this.jd_creacion.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.Simulation.setModal(true);
-        this.Simulation.pack();
-        this.Simulation.setLocationRelativeTo(this);
-        this.Simulation.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void bt_agregar_lamiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregar_lamiasActionPerformed
-        int salud = 475, poder = 57; 
+        int salud = 475, poder = 57;
         lamia.add(new Lamias(tf_nombreL.getText(), Double.parseDouble(
-                tf_alturaL.getText()), Integer.parseInt(tf_edadL.getText()), 
-                salud, poder, Integer.parseInt(tf_aleta.getText()), 
-                Integer.parseInt(tf_branquias.getText())));
+            tf_alturaL.getText()), Integer.parseInt(tf_edadL.getText()),
+        salud, poder, Integer.parseInt(tf_aleta.getText()),
+        Integer.parseInt(tf_branquias.getText())));
         tf_nombreL.setText("");
         tf_alturaL.setText("");
         tf_edadL.setText("");
@@ -885,36 +678,25 @@ public class MainPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_agregar_lamiasActionPerformed
 
     private void bt_agregar_hamadriadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregar_hamadriadesActionPerformed
-        int salud = 373, poder = 78, salArbol = 173; 
+        int salud = 373, poder = 78, salArbol = 173;
         hamadriade.add(new Hamadriades(tf_nombreH.getText(), Double.parseDouble(
-                tf_alturaH.getText()), Integer.parseInt(tf_edadH.getText()), 
-                salud, poder, salArbol));
+            tf_alturaH.getText()), Integer.parseInt(tf_edadH.getText()),
+        salud, poder, salArbol));
         tf_nombreH.setText("");
         tf_alturaH.setText("");
         tf_edadH.setText("");
     }//GEN-LAST:event_bt_agregar_hamadriadesActionPerformed
 
     private void bt_agregar_silfidesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregar_silfidesActionPerformed
-        int salud = 563, poder = 67; 
+        int salud = 563, poder = 67;
         silfide.add(new Silfides(tf_nombreS.getText(), Double.parseDouble(
-                tf_alturaS.getText()), Integer.parseInt(tf_edadS.getText()), 
-                salud, poder, Integer.parseInt(tf_alasS.getText())));
+            tf_alturaS.getText()), Integer.parseInt(tf_edadS.getText()),
+        salud, poder, Integer.parseInt(tf_alasS.getText())));
         tf_nombreS.setText("");
         tf_alturaS.setText("");
         tf_edadS.setText("");
         tf_alasS.setText("");
     }//GEN-LAST:event_bt_agregar_silfidesActionPerformed
-
-    private void bt_agregar_salamandrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregar_salamandrasActionPerformed
-        int salud = 683, poder = 71; 
-        salamandra.add(new Salamandras(tf_nombreSS.getText(), Double.parseDouble(
-                tf_alturaSS.getText()), Integer.parseInt(tf_edadSS.getText()), 
-                salud, poder, Integer.parseInt(tf_alasSS.getText())));
-        tf_nombreSS.setText("");
-        tf_alturaSS.setText("");
-        tf_edadSS.setText("");
-        tf_alasSS.setText("");
-    }//GEN-LAST:event_bt_agregar_salamandrasActionPerformed
 
     private void jl_modHadasValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jl_modHadasValueChanged
         if (cb_hadas.getSelectedIndex() == 0) {
@@ -961,51 +743,17 @@ public class MainPrincipal extends javax.swing.JFrame {
             }
         } else if (cb_hadas.getSelectedIndex() == 3) {
             int postn = cb_hadas.getSelectedIndex();
-                tf_nombre1.setText(salamandra.get(postn).getNombre());
-                tf_altura1.setText(salamandra.get(postn).getAltura() + "");
-                tf_edad1.setText(salamandra.get(postn).getEdad() + "");
-                tf_alas1.setText(salamandra.get(postn).getAlas() + "");
-                tf_alas1.setEnabled(true);
-                tf_aleta1.setText("-NULL-");
-                tf_aleta1.setEnabled(false);
-                tf_branquias1.setText("-NULL-");
-                tf_branquias1.setEnabled(false);
+            tf_nombre1.setText(salamandra.get(postn).getNombre());
+            tf_altura1.setText(salamandra.get(postn).getAltura() + "");
+            tf_edad1.setText(salamandra.get(postn).getEdad() + "");
+            tf_alas1.setText(salamandra.get(postn).getAlas() + "");
+            tf_alas1.setEnabled(true);
+            tf_aleta1.setText("-NULL-");
+            tf_aleta1.setEnabled(false);
+            tf_branquias1.setText("-NULL-");
+            tf_branquias1.setEnabled(false);
         }
     }//GEN-LAST:event_jl_modHadasValueChanged
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        JFileChooser fc = new JFileChooser();
-        int op =  fc.showOpenDialog(this);
-        File f = fc.getSelectedFile();
-        try {
-            FileInputStream enter = new FileInputStream(f);
-            ObjectInputStream selc = new ObjectInputStream(enter);
-            Hadas fairy;
-            try {
-                while ((fairy = (Hadas)selc.readObject()) != null) {
-                    if (fairy instanceof Lamias) {
-                        lamia.add((Lamias)fairy);
-                    } else if (fairy instanceof Hamadriades) {
-                        hamadriade.add((Hamadriades)fairy);
-                    } else if (fairy instanceof Silfides) {
-                        silfide.add((Silfides)fairy);
-                    } else if (fairy instanceof Salamandras) {
-                        salamandra.add((Salamandras)fairy);
-                    }
-                }
-                Archivo = f;
-            } catch (Exception ex) {
-            } finally {
-                selc.close();
-                enter.close();
-            }
-        } catch (Exception ex) {
-        }
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        dispose();
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void cb_hadasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_hadasItemStateChanged
         if (cb_hadas.getSelectedIndex() == 0) {
@@ -1100,86 +848,6 @@ public class MainPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bt_modificar_hadasActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        if (cont > 0) {
-            Archivo = new File(PATH);
-            FileOutputStream fw = null;
-            ObjectOutputStream bw = null;
-            try {
-                fw = new FileOutputStream(Archivo);
-                bw = new  ObjectOutputStream(fw);
-                for (Lamias l : lamia) {
-                    bw.writeObject(l);
-                }
-                for (Hamadriades h : hamadriade) {
-                    bw.writeObject(h);
-                }
-                for (Silfides s : silfide) {
-                    bw.writeObject(s);
-                }
-                for (Salamandras ss : salamandra) {
-                    bw.writeObject(ss);
-                }
-                bw.flush();
-            } catch (Exception ex) {
-            } finally {
-                try {
-                    bw.close();
-                    fw.close();
-                } catch (Exception ex) { 
-                }
-            }
-        } else {
-            JFileChooser fcs = new JFileChooser();
-            int zx = fcs.showSaveDialog(this);
-            if (zx == JFileChooser.APPROVE_OPTION) {
-                File fs = fcs.getSelectedFile();
-                PATH = fs.getAbsolutePath();
-                FileOutputStream fw = null;
-                ObjectOutputStream bw = null;
-                try {
-                    fw = new FileOutputStream(fs);
-                    bw = new ObjectOutputStream(fw);
-                    for (Lamias l : lamia) {
-                        bw.writeObject(l);
-                    }
-                    for (Hamadriades h : hamadriade) {
-                        bw.writeObject(h);
-                    }
-                    for (Silfides s : silfide) {
-                        bw.writeObject(s);
-                    }
-                    for (Salamandras ss : salamandra) {
-                        bw.writeObject(ss);
-                    }
-                    bw.flush();
-                } catch (Exception ex) {
-                } finally {
-                    try {
-                        bw.close();
-                        fw.close();
-                    } catch (Exception ex) { 
-                    }
-                }
-            }
-        }
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        JOptionPane.showMessageDialog(this, "Tierra de Hadas\n"+"Version 6.6.6\n"
-                + "Compiled Marzo 17 2016 7:30:78\n"
-                + "Author: Carlos Rivera\n"
-                + "\n"
-                + "Tierra de Hadas programa experimental de Programacion\n"
-                + "\n"
-                + "HP y Windows son marcas de algun lugar\n"
-                + "No estan asociadas con Land of Fairies");
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1191,45 +859,38 @@ public class MainPrincipal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainPrincipal().setVisible(true);
+                new Principal().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDialog Hadas;
-    private javax.swing.JDialog Simulation;
     private javax.swing.JButton bt_agregar_hamadriades;
     private javax.swing.JButton bt_agregar_lamias;
-    private javax.swing.JButton bt_agregar_salamandras;
     private javax.swing.JButton bt_agregar_silfides;
-    private javax.swing.JButton bt_eliminar_hadas;
     private javax.swing.JButton bt_modificar_hadas;
-    private javax.swing.JComboBox cb_elimhadas;
     private javax.swing.JComboBox cb_hadas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1243,13 +904,7 @@ public class MainPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -1276,50 +931,39 @@ public class MainPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JList jl_elimHadas;
+    private javax.swing.JDialog jd_creacion;
     private javax.swing.JList jl_modHadas;
     private javax.swing.JTextField tf_alas1;
     private javax.swing.JTextField tf_alasS;
-    private javax.swing.JTextField tf_alasSS;
     private javax.swing.JTextField tf_aleta;
     private javax.swing.JTextField tf_aleta1;
     private javax.swing.JTextField tf_altura1;
     private javax.swing.JTextField tf_alturaH;
     private javax.swing.JTextField tf_alturaL;
     private javax.swing.JTextField tf_alturaS;
-    private javax.swing.JTextField tf_alturaSS;
     private javax.swing.JTextField tf_branquias;
     private javax.swing.JTextField tf_branquias1;
     private javax.swing.JTextField tf_edad1;
     private javax.swing.JTextField tf_edadH;
     private javax.swing.JTextField tf_edadL;
     private javax.swing.JTextField tf_edadS;
-    private javax.swing.JTextField tf_edadSS;
     private javax.swing.JTextField tf_nombre1;
     private javax.swing.JTextField tf_nombreH;
     private javax.swing.JTextField tf_nombreL;
     private javax.swing.JTextField tf_nombreS;
-    private javax.swing.JTextField tf_nombreSS;
     private javax.swing.JTextField tf_poderH;
     private javax.swing.JTextField tf_poderL;
     private javax.swing.JTextField tf_poderS;
-    private javax.swing.JTextField tf_poderSS;
     private javax.swing.JTextField tf_salarbolH;
     private javax.swing.JTextField tf_saludH;
     private javax.swing.JTextField tf_saludL;
     private javax.swing.JTextField tf_saludS;
-    private javax.swing.JTextField tf_saludSS;
     // End of variables declaration//GEN-END:variables
-ArrayList<Lamias> lamia = new ArrayList();
-ArrayList<Hamadriades> hamadriade = new ArrayList();
-ArrayList<Silfides> silfide = new ArrayList();
-ArrayList<Salamandras> salamandra = new ArrayList();
-File Archivo;
-int cont;
-String PATH;
+    ArrayList<Lamias> lamia = new ArrayList();
+    ArrayList<Hamadriades> hamadriade = new ArrayList();
+    ArrayList<Salamandras> salamandra = new ArrayList();
+    ArrayList<Silfides> silfide = new ArrayList();
 }
