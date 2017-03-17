@@ -1,33 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package carlosrivera_lab.pkg8;
 
 import java.io.Serializable;
+import javax.swing.JOptionPane;
 
-/**
- *
- * @author Usuario Dell
- */
-public class Hadas implements Serializable {
-
+public class Hadas implements Serializable{
     protected String nombre;
     protected double altura;
-    protected double edad;
-    protected double salud;
-    protected double poder;
+    protected int edad;
+    protected int salud;
+    protected int poder;
+    private static final long SerialVersionUID = 1412L;
 
-    protected static final long SerialVersionUID = 777L;
-
-    public Hadas() {
-    }
-
-    public Hadas(String nombre, double altura, double edad, double salud, double poder) {
+    public Hadas(String nombre, double altura, int edad, int salud, int poder) {
         this.nombre = nombre;
-        this.altura = altura;
-        this.edad = edad;
+        if (altura < 15) {
+            this.altura = altura;
+        } else {
+            while (altura >= 15) {
+                altura = Double.parseDouble(JOptionPane.showInputDialog(
+                        "Ingrese la altura del hada otravez"));
+            }
+        }
+        if (edad > 0) {
+            this.edad = edad;
+        } else {
+            while (edad <= 0) {
+                edad = Integer.parseInt(JOptionPane.showInputDialog(
+                        "Ingrese la edad del hada otravez"));
+            }
+        }
         this.salud = salud;
         this.poder = poder;
     }
@@ -45,37 +46,51 @@ public class Hadas implements Serializable {
     }
 
     public void setAltura(double altura) {
-        this.altura = altura;
-
+        if (altura < 15) {
+            this.altura = altura;
+        } else {
+            while (altura >= 15) {
+                altura = Double.parseDouble(JOptionPane.showInputDialog(
+                        "Ingrese la altura del hada otravez"));
+            }
+        }
     }
 
-    public double getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(double edad) {
-        this.edad = edad;
+    public void setEdad(int edad) {
+        if (edad > 0) {
+            this.edad = edad;
+        } else {
+            while (edad <= 0) {
+                edad = Integer.parseInt(JOptionPane.showInputDialog(
+                        "Ingrese la edad del hada otravez"));
+            }
+        }
     }
 
-    public double getSalud() {
+    public int getSalud() {
         return salud;
     }
 
-    public void setSalud(double salud) {
+    public void setSalud(int salud) {
         this.salud = salud;
     }
 
-    public double getPoder() {
+    public int getPoder() {
         return poder;
     }
 
-    public void setPoder(double poder) {
+    public void setPoder(int poder) {
         this.poder = poder;
     }
 
     @Override
     public String toString() {
-        return "Hadas{" + "nombre=" + nombre + ", altura=" + altura + ", edad=" + edad + ", salud=" + salud + ", poder=" + poder + '}';
+        return nombre;
     }
-
+    
+    
 }

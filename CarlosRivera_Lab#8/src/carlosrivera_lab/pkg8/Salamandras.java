@@ -1,41 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package carlosrivera_lab.pkg8;
 
-/**
- *
- * @author Usuario Dell
- */
-public class Salamandras extends Hadas {
+import javax.swing.JOptionPane;
 
-    private int alas;
+public class Salamandras extends Hadas{
+    private int Alas;
 
-    public Salamandras() {
-        super();
-    }
-
-    public Salamandras(int alas, String nombre, double altura, double edad, double salud, double poder)  {
+    public Salamandras(String nombre, double altura, int edad, int salud, int poder, int Alas) {
         super(nombre, altura, edad, salud, poder);
-            this.alas = alas;
-
+        if (Alas >= 16) {
+            this.Alas = Alas;
+        } else {
+            while (Alas < 16) {
+                Alas = Integer.parseInt(JOptionPane.showInputDialog(
+                        "Ingrese la cantidad de alas otravez"));
+            }
+        }
     }
 
     public int getAlas() {
-        return alas;
+        return Alas;
     }
 
-    public void setAlas(int alas){
-            this.alas = alas;
-
+    public void setAlas(int Alas) {
+        if (Alas >= 16) {
+            this.Alas = Alas;
+        } else {
+            while (Alas < 16) {
+                Alas = Integer.parseInt(JOptionPane.showInputDialog(
+                        "Ingrese la cantidad de alas otravez"));
+            }
+        }
     }
-
 
     @Override
     public String toString() {
-        return "Salamandras{" + "alas=" + alas + '}';
+        return "Salamandra: " + nombre;
     }
-
+    
 }

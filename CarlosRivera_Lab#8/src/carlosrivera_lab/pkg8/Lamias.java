@@ -1,48 +1,64 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package carlosrivera_lab.pkg8;
 
-/**
- *
- * @author Usuario Dell
- */
-public class Lamias extends Hadas {
+import javax.swing.JOptionPane;
 
-    private double aleta;
-    private double branquias;
+public class Lamias extends Hadas{
+    private double Aleta;
+    private int Branquias;
 
-    public Lamias() {
-        super();
-    }
-
-    public Lamias(double aleta, double branquias, String nombre, double altura, double edad, double salud, double poder) {
+    public Lamias(String nombre, double altura, int edad, int salud, int poder, double Aleta, int Branquias) {
         super(nombre, altura, edad, salud, poder);
-        this.aleta = aleta;
-        this.branquias = branquias;
+        if (Aleta > 0 && Aleta <= 5) {
+            this.Aleta = Aleta;
+        } else {
+            while (Aleta <= 0 && Aleta > 5) {
+                Aleta = Double.parseDouble(JOptionPane.showInputDialog(
+                        "Ingrese el Tamaño Otravez"));
+            }
+        }
+        if (Branquias > 0 && Branquias <= 8) {
+            this.Branquias = Branquias;
+        } else {
+            while (Branquias <= 0 && Branquias > 8) {
+                Branquias = Integer.parseInt(JOptionPane.showInputDialog(
+                        "Ingrese el Tamaño Otravez"));
+            }
+        }
     }
 
     public double getAleta() {
-        return aleta;
+        return Aleta;
     }
 
-    public void setAleta(double aleta)  {
-        this.aleta = aleta;
+    public void setAleta(double Aleta) {
+        if (Aleta > 0 && Aleta <= 5) {
+            this.Aleta = Aleta;
+        } else {
+            while (Aleta <= 0 && Aleta > 5) {
+                Aleta = Double.parseDouble(JOptionPane.showInputDialog(
+                        "Ingrese el Tamaño Otravez"));
+            }
+        }
     }
 
-    public double getBranquias() {
-        return branquias;
+    public int getBranquias() {
+        return Branquias;
     }
 
-    public void setBranquias(int branquias) {
-        this.branquias = branquias;
+    public void setBranquias(int Branquias) { 
+        if (Branquias > 0 && Branquias <= 8) {
+            this.Branquias = Branquias;
+        } else {
+            while (Branquias <= 0 && Branquias > 8) {
+                Branquias = Integer.parseInt(JOptionPane.showInputDialog(
+                        "Ingrese el Tamaño Otravez"));
+            }
+        }
     }
 
     @Override
     public String toString() {
-        return "Lamias{" + "aleta=" + aleta + ", branquias=" + branquias + '}';
+        return "Lamia: "+nombre;
     }
-
+    
 }
