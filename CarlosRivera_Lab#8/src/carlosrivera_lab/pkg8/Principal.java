@@ -27,6 +27,8 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        this.setLocationRelativeTo(this);
+        cont = 0;
     }
 
     /**
@@ -90,7 +92,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jl_modHadas = new javax.swing.JList();
+        jl_modificar_Hadas = new javax.swing.JList();
         cb_hadas = new javax.swing.JComboBox();
         jLabel32 = new javax.swing.JLabel();
         tf_nombre1 = new javax.swing.JTextField();
@@ -105,11 +107,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         tf_alas1 = new javax.swing.JTextField();
         bt_modificar_hadas = new javax.swing.JButton();
+        bt_eliminar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jl_elimHadas = new javax.swing.JList();
-        cb_elimhadas = new javax.swing.JComboBox();
+        jl_eliminar_Hadas = new javax.swing.JList();
+        cb_eliminar_hadas = new javax.swing.JComboBox();
         bt_eliminar_hadas = new javax.swing.JButton();
         menu_popup = new javax.swing.JPopupMenu();
         jButton1 = new javax.swing.JButton();
@@ -191,7 +194,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(140, 140, 140)
                         .addComponent(bt_agregar_lamias, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,7 +223,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_branquias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(bt_agregar_lamias, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Lamias", jPanel4);
@@ -291,7 +294,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(146, 146, 146)
                         .addComponent(bt_agregar_hamadriades, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -318,7 +321,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_salarbolH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(bt_agregar_hamadriades, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Hamadriades", jPanel5);
@@ -377,7 +380,7 @@ public class Principal extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(tf_alturaS, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(tf_alasS, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bt_agregar_silfides, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -408,7 +411,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_alasS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addComponent(bt_agregar_silfides, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Silfides", jPanel6);
@@ -417,11 +420,11 @@ public class Principal extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+            .addGap(0, 491, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 263, Short.MAX_VALUE)
+            .addGap(0, 329, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Salamandras", jPanel7);
@@ -447,17 +450,17 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jl_modHadas.addMouseListener(new java.awt.event.MouseAdapter() {
+        jl_modificar_Hadas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jl_modHadasMouseClicked(evt);
+                jl_modificar_HadasMouseClicked(evt);
             }
         });
-        jl_modHadas.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+        jl_modificar_Hadas.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                jl_modHadasValueChanged(evt);
+                jl_modificar_HadasValueChanged(evt);
             }
         });
-        jScrollPane1.setViewportView(jl_modHadas);
+        jScrollPane1.setViewportView(jl_modificar_Hadas);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -465,7 +468,7 @@ public class Principal extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -502,52 +505,64 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        bt_eliminar.setText("Eliminar");
+        bt_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_eliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addGap(51, 51, 51)
-                            .addComponent(jLabel37)
-                            .addGap(18, 18, 18)
-                            .addComponent(tf_aleta1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addGap(49, 49, 49)
-                            .addComponent(jLabel35)
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(bt_modificar_hadas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tf_alas1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                            .addGap(24, 24, 24)
-                            .addComponent(jLabel38)
-                            .addGap(18, 18, 18)
-                            .addComponent(tf_branquias1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(bt_eliminar))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel34)
+                                    .addGap(51, 51, 51)
+                                    .addComponent(jLabel37)
                                     .addGap(18, 18, 18)
-                                    .addComponent(tf_edad1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(tf_aleta1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel32)
+                                    .addGap(49, 49, 49)
+                                    .addComponent(jLabel35)
                                     .addGap(18, 18, 18)
-                                    .addComponent(tf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(bt_modificar_hadas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(tf_alas1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                    .addGap(24, 24, 24)
+                                    .addComponent(jLabel38)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(tf_branquias1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addComponent(jLabel33)
-                                .addGap(18, 18, 18)
-                                .addComponent(tf_altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cb_hadas, 0, 196, Short.MAX_VALUE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                                .addGap(30, 30, 30)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                            .addComponent(jLabel34)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(tf_edad1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                            .addComponent(jLabel32)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(tf_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addComponent(jLabel33)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(tf_altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cb_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -583,14 +598,16 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jLabel35))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bt_modificar_hadas)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bt_eliminar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Eliminar", jPanel3);
+        jTabbedPane1.addTab("Modificar", jPanel3);
 
         jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jScrollPane2.setViewportView(jl_elimHadas);
+        jScrollPane2.setViewportView(jl_eliminar_Hadas);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -609,7 +626,12 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        cb_elimhadas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Lamias", "Hamadriades", "Silfides", "Ssalamadras" }));
+        cb_eliminar_hadas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Lamias", "Hamadriades", "Silfides", "Ssalamadras" }));
+        cb_eliminar_hadas.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_eliminar_hadasItemStateChanged(evt);
+            }
+        });
 
         bt_eliminar_hadas.setText("Eliminar");
 
@@ -628,7 +650,7 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(147, 147, 147)
-                        .addComponent(cb_elimhadas, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cb_eliminar_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -636,7 +658,7 @@ public class Principal extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addComponent(cb_elimhadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cb_eliminar_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -644,7 +666,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Modificar", jPanel2);
+        jTabbedPane1.addTab("Eliminar", jPanel2);
 
         javax.swing.GroupLayout jd_creacionLayout = new javax.swing.GroupLayout(jd_creacion.getContentPane());
         jd_creacion.getContentPane().setLayout(jd_creacionLayout);
@@ -652,8 +674,8 @@ public class Principal extends javax.swing.JFrame {
             jd_creacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_creacionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jd_creacionLayout.setVerticalGroup(
             jd_creacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -724,7 +746,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(79, 79, 79)
                 .addComponent(jButton2)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -733,7 +755,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         pack();
@@ -781,7 +803,7 @@ public class Principal extends javax.swing.JFrame {
         tf_alasS.setText("");
     }//GEN-LAST:event_bt_agregar_silfidesActionPerformed
 
-    private void jl_modHadasValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jl_modHadasValueChanged
+    private void jl_modificar_HadasValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jl_modificar_HadasValueChanged
         if (cb_hadas.getSelectedIndex() == 0) {
             int postn = cb_hadas.getSelectedIndex();
             if (postn != -1) {
@@ -836,7 +858,7 @@ public class Principal extends javax.swing.JFrame {
             tf_branquias1.setText("-NULL-");
             tf_branquias1.setEnabled(false);
         }
-    }//GEN-LAST:event_jl_modHadasValueChanged
+    }//GEN-LAST:event_jl_modificar_HadasValueChanged
 
     private void cb_hadasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_hadasItemStateChanged
         if (cb_hadas.getSelectedIndex() == 0) {
@@ -844,32 +866,32 @@ public class Principal extends javax.swing.JFrame {
             for (int i = 0; i < lamia.size(); i++) {
                 modelo.addElement(lamia.get(i));
             }
-            jl_modHadas.setModel(modelo);
+            jl_modificar_Hadas.setModel(modelo);
         } else if (cb_hadas.getSelectedIndex() == 1) {
             DefaultListModel modelo = new DefaultListModel();
             for (int i = 0; i < hamadriade.size(); i++) {
                 modelo.addElement(hamadriade.get(i));
             }
-            jl_modHadas.setModel(modelo);
+            jl_modificar_Hadas.setModel(modelo);
         } else if (cb_hadas.getSelectedIndex() == 2) {
             DefaultListModel modelo = new DefaultListModel();
             for (int i = 0; i < silfide.size(); i++) {
                 modelo.addElement(silfide.get(i));
             }
-            jl_modHadas.setModel(modelo);
+            jl_modificar_Hadas.setModel(modelo);
         } else if (cb_hadas.getSelectedIndex() == 3) {
             DefaultListModel modelo = new DefaultListModel();
             for (int i = 0; i < salamandra.size(); i++) {
                 modelo.addElement(salamandra.get(i));
             }
-            jl_modHadas.setModel(modelo);
+            jl_modificar_Hadas.setModel(modelo);
         } else {
             JOptionPane.showMessageDialog(this, "NO SE PUDO");
         }
     }//GEN-LAST:event_cb_hadasItemStateChanged
 
     private void bt_modificar_hadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_modificar_hadasActionPerformed
-        int postn = jl_modHadas.getSelectedIndex();
+        int postn = jl_modificar_Hadas.getSelectedIndex();
         if (cb_hadas.getSelectedIndex() == 0) {
             lamia.get(postn).setNombre(tf_nombre1.getText());
             lamia.get(postn).setAltura(Double.parseDouble(tf_altura1.getText()));
@@ -931,12 +953,13 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bt_modificar_hadasActionPerformed
 
-    private void jl_modHadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_modHadasMouseClicked
+    private void jl_modificar_HadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_modificar_HadasMouseClicked
         // TODO add your handling code here:
-        if (evt.isMetaDown()) {
-
-        }
-    }//GEN-LAST:event_jl_modHadasMouseClicked
+//        if (evt.isMetaDown()) {
+//             int pp = jl_modHadas.getSelectedIndex();
+//            menu_popup.show(evt.getComponent(), evt.getX(), evt.getY());
+//        }
+    }//GEN-LAST:event_jl_modificar_HadasMouseClicked
 
     private void jm_abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_abrirActionPerformed
         // TODO add your handling code here:
@@ -1054,6 +1077,84 @@ public class Principal extends javax.swing.JFrame {
                 + "No estan asociadas con Land of Fairies");
     }//GEN-LAST:event_jm_aboutActionPerformed
 
+    private void bt_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminarActionPerformed
+        // TODO add your handling code here:
+                
+        if (jl_modificar_Hadas.getSelectedIndex() != -1) {
+            System.out.println("se selecciono");
+            
+            lamia.remove(jl_modificar_Hadas.getSelectedIndex());
+            
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < lamia.size(); i++) {
+                modelo.addElement(lamia.get(i));
+            }
+        }else{
+            System.out.println("no se selecciono");
+        }
+        
+//        if (jl_modificar_Hadas.getSelectedIndex() >= 0 && 1 == 99999999) {
+////            jl_modificar_Hadas.remove(jl_modificar_Hadas.getSelectedIndex());
+//            if (cb_hadas.getSelectedIndex() == 0) {
+//                int postn = cb_hadas.getSelectedIndex();
+//                if (postn != -1) {
+//                    jl_modificar_Hadas.remove(jl_modificar_Hadas.getSelectedIndex());
+//                    lamia.remove(jl_modificar_Hadas.getSelectedIndex());
+//                } else {
+//                }
+//            } else if (cb_hadas.getSelectedIndex() == 1) {
+//                int postn = cb_hadas.getSelectedIndex();
+//                if (postn != -1) {
+//                    jl_modificar_Hadas.remove(jl_modificar_Hadas.getSelectedIndex());
+//                    hamadriade.remove(jl_modificar_Hadas.getSelectedIndex());
+//                } else {
+//                }
+//            } else if (cb_hadas.getSelectedIndex() == 2) {
+//                int postn = cb_hadas.getSelectedIndex();
+//                if (postn != -1) {
+//                    jl_modificar_Hadas.remove(jl_modificar_Hadas.getSelectedIndex());
+//                    salamandra.remove(jl_modificar_Hadas.getSelectedIndex());
+//                } else {
+//                }
+//            } else if (cb_hadas.getSelectedIndex() == 3) {
+//                int postn = cb_hadas.getSelectedIndex();
+//                jl_modificar_Hadas.remove(jl_modificar_Hadas.getSelectedIndex());
+//                silfide.remove(jl_modificar_Hadas.getSelectedIndex());
+//            }
+//        }
+    }//GEN-LAST:event_bt_eliminarActionPerformed
+
+    private void cb_eliminar_hadasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_eliminar_hadasItemStateChanged
+        // TODO add your handling code here:
+        if (cb_eliminar_hadas.getSelectedIndex() == 0) {
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < lamia.size(); i++) {
+                modelo.addElement(lamia.get(i));
+            }
+            jl_modificar_Hadas.setModel(modelo);
+        } else if (cb_eliminar_hadas.getSelectedIndex() == 1) {
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < hamadriade.size(); i++) {
+                modelo.addElement(hamadriade.get(i));
+            }
+            jl_modificar_Hadas.setModel(modelo);
+        } else if (cb_eliminar_hadas.getSelectedIndex() == 2) {
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < silfide.size(); i++) {
+                modelo.addElement(silfide.get(i));
+            }
+            jl_modificar_Hadas.setModel(modelo);
+        } else if (cb_eliminar_hadas.getSelectedIndex() == 3) {
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < salamandra.size(); i++) {
+                modelo.addElement(salamandra.get(i));
+            }
+            jl_eliminar_Hadas.setModel(modelo);
+        } else {
+            JOptionPane.showMessageDialog(this, "NO SE PUDO");
+        }
+    }//GEN-LAST:event_cb_eliminar_hadasItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1093,9 +1194,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton bt_agregar_hamadriades;
     private javax.swing.JButton bt_agregar_lamias;
     private javax.swing.JButton bt_agregar_silfides;
+    private javax.swing.JButton bt_eliminar;
     private javax.swing.JButton bt_eliminar_hadas;
     private javax.swing.JButton bt_modificar_hadas;
-    private javax.swing.JComboBox cb_elimhadas;
+    private javax.swing.JComboBox cb_eliminar_hadas;
     private javax.swing.JComboBox cb_hadas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -1140,8 +1242,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JDialog jd_creacion;
-    private javax.swing.JList jl_elimHadas;
-    private javax.swing.JList jl_modHadas;
+    private javax.swing.JList jl_eliminar_Hadas;
+    private javax.swing.JList jl_modificar_Hadas;
     private javax.swing.JMenuItem jm_about;
     private javax.swing.JMenuItem jm_abrir;
     private javax.swing.JMenuItem jm_guardar;
