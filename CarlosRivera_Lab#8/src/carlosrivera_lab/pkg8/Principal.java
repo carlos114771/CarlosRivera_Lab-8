@@ -1089,10 +1089,39 @@ public class Principal extends javax.swing.JFrame {
             for (int i = 0; i < lamia.size(); i++) {
                 modelo.addElement(lamia.get(i));
             }
-        }else{
-            System.out.println("no se selecciono");
+        } if (jl_modificar_Hadas.getSelectedIndex() != -1) {
+            System.out.println("se selecciono");
+            
+            hamadriade.remove(jl_modificar_Hadas.getSelectedIndex());
+            
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < hamadriade.size(); i++) {
+                modelo.addElement(hamadriade.get(i));
+            }
+        } if (jl_modificar_Hadas.getSelectedIndex() != -1) {
+            System.out.println("se selecciono");
+            
+            salamandra.remove(jl_modificar_Hadas.getSelectedIndex());
+            
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < salamandra.size(); i++) {
+                modelo.addElement(salamandra.get(i));
+            }
+        } if (jl_modificar_Hadas.getSelectedIndex() != -1) {
+            System.out.println("se selecciono");
+            
+            silfide.remove(jl_modificar_Hadas.getSelectedIndex());
+            
+            DefaultListModel modelo = new DefaultListModel();
+            for (int i = 0; i < silfide.size(); i++) {
+                modelo.addElement(silfide.get(i));
+            }
         }
         
+//        }else{
+//            System.out.println("no se selecciono");
+//        }
+//        
 //        if (jl_modificar_Hadas.getSelectedIndex() >= 0 && 1 == 99999999) {
 ////            jl_modificar_Hadas.remove(jl_modificar_Hadas.getSelectedIndex());
 //            if (cb_hadas.getSelectedIndex() == 0) {
