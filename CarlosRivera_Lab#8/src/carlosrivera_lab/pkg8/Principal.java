@@ -5,9 +5,16 @@
  */
 package carlosrivera_lab.pkg8;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  *
@@ -99,15 +106,21 @@ public class Principal extends javax.swing.JFrame {
         tf_alas1 = new javax.swing.JTextField();
         bt_modificar_hadas = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jl_elimHadas = new javax.swing.JList();
+        cb_elimhadas = new javax.swing.JComboBox();
+        bt_eliminar_hadas = new javax.swing.JButton();
+        menu_popup = new javax.swing.JPopupMenu();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        jm_abrir = new javax.swing.JMenuItem();
+        jm_guardar = new javax.swing.JMenuItem();
+        jm_guardar_como = new javax.swing.JMenuItem();
+        jm_salir = new javax.swing.JMenuItem();
+        jm_about = new javax.swing.JMenuItem();
 
         jTabbedPane2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 0, 0)));
 
@@ -434,6 +447,11 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jl_modHadas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_modHadasMouseClicked(evt);
+            }
+        });
         jl_modHadas.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 jl_modHadasValueChanged(evt);
@@ -570,15 +588,60 @@ public class Principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Eliminar", jPanel3);
 
+        jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jScrollPane2.setViewportView(jl_elimHadas);
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        cb_elimhadas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Lamias", "Hamadriades", "Silfides", "Ssalamadras" }));
+
+        bt_eliminar_hadas.setText("Eliminar");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 584, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(bt_eliminar_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(147, 147, 147))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(cb_elimhadas, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 303, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(cb_elimhadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bt_eliminar_hadas, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Modificar", jPanel2);
@@ -613,20 +676,40 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu1.setText("Opciones");
 
-        jMenuItem1.setText("Abrir");
-        jMenu1.add(jMenuItem1);
+        jm_abrir.setText("Abrir");
+        jm_abrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jm_abrirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jm_abrir);
 
-        jMenuItem2.setText("Guardar");
-        jMenu1.add(jMenuItem2);
+        jm_guardar.setText("Guardar");
+        jm_guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jm_guardarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jm_guardar);
 
-        jMenuItem3.setText("Guardar Como");
-        jMenu1.add(jMenuItem3);
+        jm_guardar_como.setText("Guardar Como");
+        jMenu1.add(jm_guardar_como);
 
-        jMenuItem4.setText("Salir");
-        jMenu1.add(jMenuItem4);
+        jm_salir.setText("Salir");
+        jm_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jm_salirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jm_salir);
 
-        jMenuItem5.setText("About");
-        jMenu1.add(jMenuItem5);
+        jm_about.setText("About");
+        jm_about.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jm_aboutActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jm_about);
 
         jMenuBar1.add(jMenu1);
 
@@ -667,9 +750,9 @@ public class Principal extends javax.swing.JFrame {
     private void bt_agregar_lamiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregar_lamiasActionPerformed
         int salud = 475, poder = 57;
         lamia.add(new Lamias(tf_nombreL.getText(), Double.parseDouble(
-            tf_alturaL.getText()), Integer.parseInt(tf_edadL.getText()),
-        salud, poder, Integer.parseInt(tf_aleta.getText()),
-        Integer.parseInt(tf_branquias.getText())));
+                tf_alturaL.getText()), Integer.parseInt(tf_edadL.getText()),
+                salud, poder, Integer.parseInt(tf_aleta.getText()),
+                Integer.parseInt(tf_branquias.getText())));
         tf_nombreL.setText("");
         tf_alturaL.setText("");
         tf_edadL.setText("");
@@ -680,8 +763,8 @@ public class Principal extends javax.swing.JFrame {
     private void bt_agregar_hamadriadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregar_hamadriadesActionPerformed
         int salud = 373, poder = 78, salArbol = 173;
         hamadriade.add(new Hamadriades(tf_nombreH.getText(), Double.parseDouble(
-            tf_alturaH.getText()), Integer.parseInt(tf_edadH.getText()),
-        salud, poder, salArbol));
+                tf_alturaH.getText()), Integer.parseInt(tf_edadH.getText()),
+                salud, poder, salArbol));
         tf_nombreH.setText("");
         tf_alturaH.setText("");
         tf_edadH.setText("");
@@ -690,8 +773,8 @@ public class Principal extends javax.swing.JFrame {
     private void bt_agregar_silfidesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_agregar_silfidesActionPerformed
         int salud = 563, poder = 67;
         silfide.add(new Silfides(tf_nombreS.getText(), Double.parseDouble(
-            tf_alturaS.getText()), Integer.parseInt(tf_edadS.getText()),
-        salud, poder, Integer.parseInt(tf_alasS.getText())));
+                tf_alturaS.getText()), Integer.parseInt(tf_edadS.getText()),
+                salud, poder, Integer.parseInt(tf_alasS.getText())));
         tf_nombreS.setText("");
         tf_alturaS.setText("");
         tf_edadS.setText("");
@@ -780,8 +863,8 @@ public class Principal extends javax.swing.JFrame {
                 modelo.addElement(salamandra.get(i));
             }
             jl_modHadas.setModel(modelo);
-        }  else {
-            JOptionPane.showMessageDialog(this,"NO SE PUDO");
+        } else {
+            JOptionPane.showMessageDialog(this, "NO SE PUDO");
         }
     }//GEN-LAST:event_cb_hadasItemStateChanged
 
@@ -848,6 +931,129 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bt_modificar_hadasActionPerformed
 
+    private void jl_modHadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_modHadasMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+
+        }
+    }//GEN-LAST:event_jl_modHadasMouseClicked
+
+    private void jm_abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_abrirActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fc = new JFileChooser();
+        int op = fc.showOpenDialog(this);
+        File f = fc.getSelectedFile();
+        try {
+            FileInputStream enter = new FileInputStream(f);
+            ObjectInputStream selc = new ObjectInputStream(enter);
+            Hadas fairy;
+            try {
+                while ((fairy = (Hadas) selc.readObject()) != null) {
+                    if (fairy instanceof Lamias) {
+                        lamia.add((Lamias) fairy);
+                    } else if (fairy instanceof Hamadriades) {
+                        hamadriade.add((Hamadriades) fairy);
+                    } else if (fairy instanceof Silfides) {
+                        silfide.add((Silfides) fairy);
+                    } else if (fairy instanceof Salamandras) {
+                        salamandra.add((Salamandras) fairy);
+                    }
+                }
+                Archivo = f;
+            } catch (Exception ex) {
+            } finally {
+                selc.close();
+                enter.close();
+            }
+        } catch (Exception ex) {
+        }
+
+    }//GEN-LAST:event_jm_abrirActionPerformed
+
+    private void jm_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_guardarActionPerformed
+        // TODO add your handling code here:
+        if (cont > 0) {
+            Archivo = new File(PATH);
+            FileOutputStream fw = null;
+            ObjectOutputStream bw = null;
+            try {
+                fw = new FileOutputStream(Archivo);
+                bw = new ObjectOutputStream(fw);
+                for (Lamias l : lamia) {
+                    bw.writeObject(l);
+                }
+                for (Hamadriades h : hamadriade) {
+                    bw.writeObject(h);
+                }
+                for (Silfides s : silfide) {
+                    bw.writeObject(s);
+                }
+                for (Salamandras ss : salamandra) {
+                    bw.writeObject(ss);
+                }
+                bw.flush();
+            } catch (Exception ex) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (Exception ex) {
+                }
+            }
+        } else {
+            JFileChooser fcs = new JFileChooser();
+            int zx = fcs.showSaveDialog(this);
+            if (zx == JFileChooser.APPROVE_OPTION) {
+                File fs = fcs.getSelectedFile();
+                PATH = fs.getAbsolutePath();
+                FileOutputStream fw = null;
+                ObjectOutputStream bw = null;
+                try {
+                    fw = new FileOutputStream(fs);
+                    bw = new ObjectOutputStream(fw);
+                    for (Lamias l : lamia) {
+                        bw.writeObject(l);
+                    }
+                    for (Hamadriades h : hamadriade) {
+                        bw.writeObject(h);
+                    }
+                    for (Silfides s : silfide) {
+                        bw.writeObject(s);
+                    }
+                    for (Salamandras ss : salamandra) {
+                        bw.writeObject(ss);
+                    }
+                    bw.flush();
+                } catch (Exception ex) {
+                } finally {
+                    try {
+                        bw.close();
+                        fw.close();
+                    } catch (Exception ex) {
+                    }
+                }
+            }
+        }
+
+    }//GEN-LAST:event_jm_guardarActionPerformed
+
+    private void jm_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_salirActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jm_salirActionPerformed
+
+    private void jm_aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_aboutActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Tierra de Hadas\n" + "Version 6.6.6\n"
+                + "Compiled Marzo 17 2016 7:30:78\n"
+                + "Author: Carlos Rivera\n"
+                + "\n"
+                + "Tierra de Hadas programa experimental de Programacion\n"
+                + "\n"
+                + "HP y Windows son marcas de algun lugar\n"
+                + "No estan asociadas con Land of Fairies");
+    }//GEN-LAST:event_jm_aboutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -887,7 +1093,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton bt_agregar_hamadriades;
     private javax.swing.JButton bt_agregar_lamias;
     private javax.swing.JButton bt_agregar_silfides;
+    private javax.swing.JButton bt_eliminar_hadas;
     private javax.swing.JButton bt_modificar_hadas;
+    private javax.swing.JComboBox cb_elimhadas;
     private javax.swing.JComboBox cb_hadas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -918,11 +1126,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -931,11 +1134,20 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JDialog jd_creacion;
+    private javax.swing.JList jl_elimHadas;
     private javax.swing.JList jl_modHadas;
+    private javax.swing.JMenuItem jm_about;
+    private javax.swing.JMenuItem jm_abrir;
+    private javax.swing.JMenuItem jm_guardar;
+    private javax.swing.JMenuItem jm_guardar_como;
+    private javax.swing.JMenuItem jm_salir;
+    private javax.swing.JPopupMenu menu_popup;
     private javax.swing.JTextField tf_alas1;
     private javax.swing.JTextField tf_alasS;
     private javax.swing.JTextField tf_aleta;
@@ -966,4 +1178,7 @@ public class Principal extends javax.swing.JFrame {
     ArrayList<Hamadriades> hamadriade = new ArrayList();
     ArrayList<Salamandras> salamandra = new ArrayList();
     ArrayList<Silfides> silfide = new ArrayList();
+    File Archivo;
+    int cont;
+    String PATH;
 }
